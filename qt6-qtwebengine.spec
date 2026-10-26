@@ -146,6 +146,7 @@ BuildRequires:	python3 >= 1:3.8
 BuildRequires:	python3-devel-tools
 BuildRequires:	python3-html5lib
 BuildRequires:	python3-modules >= 1:3.8
+BuildRequires:	qt6-assistant
 BuildRequires:	re2-devel >=  20230601
 BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 2.047
