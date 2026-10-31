@@ -205,12 +205,12 @@ klientami w HTML-u/JavaScripcie.
 Summary:	The Qt6 WebEngine library
 Summary(pl.UTF-8):	Biblioteka Qt6 WebEngine
 Group:		Libraries
-Requires:	Qt6Core = %{version}
-Requires:	Qt6Gui = %{version}
-Requires:	Qt6Network = %{version}
-Requires:	Qt6Qml = %{version}
-Requires:	Qt6Quick = %{version}
-Requires:	Qt6WebChannel = %{version}
+%requires_ge_to	Qt6Core Qt6Core-devel
+%requires_ge_to	Qt6Gui Qt6Gui-devel
+%requires_ge_to	Qt6Network Qt6Network-devel
+%requires_ge_to	Qt6Qml Qt6Qml-devel
+%requires_ge_to	Qt6Quick Qt6Quick-devel
+%requires_ge_to	Qt6WebChannel Qt6WebChannel-devel
 Requires:	alsa-lib >= 1.0.10
 Requires:	freetype >= 1:2.4.2
 Requires:	harfbuzz >= 3.0.0
@@ -218,7 +218,7 @@ Requires:	harfbuzz-subset >= 3.0.0
 %requires_ge_to	libicu libicu-devel
 Requires:	libpng >= 2:1.6.0
 Requires:	libtiff >= 4.5.0
-%{?with_qtwebengine_system_libvpx:Requires:	libvpx >= 1.10.0}
+%{?with_system_libvpx:Requires:	libvpx >= 1.10.0}
 Requires:	nss >= 3.26
 Requires:	opus >= 1.3.1
 Requires:	pulseaudio-libs >= 0.9.10
@@ -236,15 +236,15 @@ klientami w HTML-u/JavaScripcie.
 Summary:	Qt6 WebEngine library - development files
 Summary(pl.UTF-8):	Biblioteka Qt6 WebEngine - pliki programistyczne
 Group:		Development/Libraries
-Requires:	Qt6Core-devel = %{version}
-Requires:	Qt6Gui-devel = %{version}
-Requires:	Qt6Network-devel = %{version}
-Requires:	Qt6PrintSupport-devel = %{version}
-Requires:	Qt6Qml-devel = %{version}
-Requires:	Qt6Quick-devel = %{version}
-Requires:	Qt6WebChannel-devel = %{version}
+%requires_ge_to	Qt6Core-devel Qt6Core-devel-devel
+%requires_ge_to	Qt6Gui-devel Qt6Gui-devel-devel
+%requires_ge_to	Qt6Network-devel Qt6Network-devel-devel
+%requires_ge_to	Qt6PrintSupport-devel Qt6PrintSupport-devel-devel
+%requires_ge_to	Qt6Qml-devel Qt6Qml-devel-devel
+%requires_ge_to	Qt6Quick-devel Qt6Quick-devel-devel
+%requires_ge_to	Qt6WebChannel-devel Qt6WebChannel-devel-devel
+%requires_ge_to	Qt6Widgets-devel Qt6Widgets-devel-devel
 Requires:	Qt6WebEngine = %{version}
-Requires:	Qt6Widgets-devel = %{version}
 
 %description -n Qt6WebEngine-devel
 Qt6 WebEngine library - development files.
@@ -257,7 +257,7 @@ Summary:	Qt6 WebEngine documentation in HTML format
 Summary(pl.UTF-8):	Dokumentacja do biblioteki Qt6 WebEngine w formacie HTML
 License:	FDL v1.3
 Group:		Documentation
-Requires:	qt6-doc-common = %{version}
+%requires_ge	qt6-doc-common
 BuildArch:	noarch
 
 %description -n Qt6WebEngine-doc
@@ -271,7 +271,7 @@ Summary:	Qt6 WebEngine documentation in QCH format
 Summary(pl.UTF-8):	Dokumentacja do biblioteki Qt6 WebEngine w formacie QCH
 License:	FDL v1.3
 Group:		Documentation
-Requires:	qt6-doc-common = %{version}
+%requires_ge	qt6-doc-common
 BuildArch:	noarch
 
 %description -n Qt6WebEngine-doc-qch
@@ -284,11 +284,11 @@ Dokumentacja do biblioteki Qt6 WebEngine w formacie QCH.
 Summary:	QWebEngineView plugin for Qt6 Designer
 Summary(pl.UTF-8):	Wtyczka QWebEngineView dla Qt6 Designera
 Group:		X11/Libraries
-Requires:	Qt6Core = %{version}
-Requires:	Qt6Designer = %{version}
-Requires:	Qt6Gui = %{version}
+%requires_ge_to	Qt6Core Qt6Core-devel
+%requires_ge_to	Qt6Designer Qt6Designer-devel
+%requires_ge_to	Qt6Gui Qt6Gui-devel
+%requires_ge_to	Qt6Widgets Qt6Widgets-devel
 Requires:	Qt6WebEngine = %{version}
-Requires:	Qt6Widgets = %{version}
 
 %description -n Qt6Designer-plugin-qwebengineview
 QWebEngineView plugin for Qt6 Designer.
@@ -300,8 +300,8 @@ Wtyczka QWebEngineView dla Qt6 Designera.
 Summary:	Qt6 WebView library WebEngine plugin
 Summary(pl.UTF-8):	Wtyczka WebEngine do biblioteki Qt6 WebView
 Group:		X11/Libraries
+%requires_ge_to	Qt6WebView Qt6WebView-devel
 Requires:	Qt6WebEngine = %{version}
-Requires:	Qt6WebView = %{version}
 
 %description -n Qt6WebView-plugin-webengine
 Qt6 WebView library WebEngine plugin.
@@ -313,12 +313,12 @@ Wtyczka WebEngine do biblioteki Qt6 WebView.
 Summary:	The Qt6 Pdf library
 Summary(pl.UTF-8):	Biblioteka Qt6 Pdf
 Group:		Libraries
-Requires:	Qt6Core = %{version}
-Requires:	Qt6Gui = %{version}
-Requires:	Qt6Network = %{version}
-Requires:	Qt6Qml = %{version}
-Requires:	Qt6Quick = %{version}
-Requires:	Qt6Widgets = %{version}
+%requires_ge_to	Qt6Core Qt6Core-devel
+%requires_ge_to	Qt6Gui Qt6Gui-devel
+%requires_ge_to	Qt6Network Qt6Network-devel
+%requires_ge_to	Qt6Qml Qt6Qml-devel
+%requires_ge_to	Qt6Quick Qt6Quick-devel
+%requires_ge_to	Qt6Widgets Qt6Widgets-devel
 
 %description -n Qt6Pdf
 Qt6 Pdf module contains classes and functions for rendering PDF
@@ -331,10 +331,10 @@ Moduł Qt6 Pdf zawiera klasy i funkcje do renderowania dokumentów PDF.
 Summary:	Qt6 Pdf library - development files
 Summary(pl.UTF-8):	Biblioteka Qt6 Pdf - pliki programistyczne
 Group:		Development/Libraries
-Requires:	Qt6Core-devel = %{version}
-Requires:	Qt6Gui-devel = %{version}
+%requires_ge_to	Qt6Core-devel Qt6Core-devel-devel
+%requires_ge_to	Qt6Gui-devel Qt6Gui-devel-devel
+%requires_ge_to	Qt6Widgets-devel Qt6Widgets-devel-devel
 Requires:	Qt6Pdf = %{version}
-Requires:	Qt6Widgets-devel = %{version}
 
 %description -n Qt6Pdf-devel
 Qt6 Pdf library - development files.
@@ -347,7 +347,7 @@ Summary:	Qt6 Pdf documentation in HTML format
 Summary(pl.UTF-8):	Dokumentacja do biblioteki Qt6 Pdf w formacie HTML
 License:	FDL v1.3
 Group:		Documentation
-Requires:	qt6-doc-common = %{version}
+%requires_ge	qt6-doc-common
 BuildArch:	noarch
 
 %description -n Qt6Pdf-doc
@@ -361,7 +361,7 @@ Summary:	Qt6 Pdf documentation in QCH format
 Summary(pl.UTF-8):	Dokumentacja do biblioteki Qt6 Pdf w formacie QCH
 License:	FDL v1.3
 Group:		Documentation
-Requires:	qt6-doc-common = %{version}
+%requires_ge	qt6-doc-common
 BuildArch:	noarch
 
 %description -n Qt6Pdf-doc-qch
